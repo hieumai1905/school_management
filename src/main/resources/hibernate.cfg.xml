@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Cấu hình JDBC -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/school_management?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1905</property>
+
+        <!-- Cấu hình dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Cấu hình show SQL -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Cấu hình cập nhật tự động -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Cấu hình format -->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Cấu hình entity package -->
+        <mapping class="com.example.school_management.models.Semester"/>
+        <mapping class="com.example.school_management.models.Subject"/>
+        <mapping class="com.example.school_management.models.Module_"/>
+        <mapping class="com.example.school_management.models.Student"/>
+        <mapping class="com.example.school_management.models.Teacher"/>
+        <mapping class="com.example.school_management.models.Class_"/>
+        <mapping class="com.example.school_management.models.Department"/>
+        <mapping class="com.example.school_management.models.AcademicYear"/>
+        <mapping class="com.example.school_management.models.Account"/>
+
+    </session-factory>
+</hibernate-configuration>
